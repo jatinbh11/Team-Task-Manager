@@ -35,9 +35,11 @@ app.use("/api/users", userRoutes);
 // 🔥 Serve frontend (React build)
 app.use(express.static(path.join(__dirname, "../../frontend/dist")));
 
-// Catch-all route (for React routing)
-app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../../frontend/dist/index.html"));
+// 🔥 FIXED Catch-all route (works in new Express)
+app.use((req, res) => {
+  res.sendFile(
+    path.join(__dirname, "../../frontend/dist/index.html")
+  );
 });
 
 // Error handler (keep LAST)
