@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# Team-Task-Manager
-
-=======
 # Team Task Manager
 
 A production-ready full-stack collaborative task management web application inspired by Trello/Asana.
